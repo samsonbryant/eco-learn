@@ -1,0 +1,26 @@
+<body>
+    <div class="container">
+        <h2><b>Sign Up</b></h2>
+        <form id="signup-form">
+   <div class="form-group">
+     <label for="email"><i class="far fa-envelope fa-icon"></i>Email:</label>
+         <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+    </div>
+    <div class="form-group">
+        <label for="password"><i class="far fa-lock fa-icon"></i>Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="form-group">
+        <input OnSubmit alert="Please check your email to confirm your registratio" type="submit" value="Sign Up">
+      </div>
+    </form>
+    <script>
+        // Form Validation
+        const form = document.getElementById('signup-form');
+    
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          // Perform form validation logic here
+        });
+      </script>
+</body>

@@ -1,0 +1,137 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+       body {
+      background-image: url('https://www.pexels.com/search/beautiful/');
+      background-size: cover;
+    }
+
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin-top: 100px;
+      border-radius: 8px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  
+      .form-group {
+        margin-bottom: 15px;
+      }
+  
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+  
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+  
+      .form-group input[type="date"] {
+        padding: 5px;
+      }
+  
+      .form-group input[type="password"] {
+        padding: 10px;
+      }
+  
+      .form-group input[type="submit"] {
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: 50;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+  
+      .form-group input[type="submit"]:hover {
+        background-color: #3622e4;
+      }
+  
+      .error {
+        color: red;
+      }
+  
+      .fa-icon {
+        margin-right: 5px;
+      }
+
+      h2 {
+        padding: 10px;
+        background-color: #1317f1;
+        color: white;
+        border: 100px;
+        border-radius: 10px;
+        cursor: pointer;  
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2><b>Sign Up</b></h2>
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="firstName"><i class="far fa-user fa-icon"></i>First Name:</label>
+          <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName"><i class="far fa-user fa-icon"></i>Last Name:</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+        </div>
+        <div class="form-group">
+          <label for="email"><i class="far fa-envelope fa-icon"></i>Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
+        <div class="form-group">
+          <label for="dob"><i class="far fa-calendar-alt fa-icon"></i>Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+        <div class="form-group">
+          <label for="address"><i class="far fa-address-card fa-icon"></i>Address:</label>
+          <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="password"><i class="far fa-lock fa-icon"></i>Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword"><i class="far fa-lock fa-icon"></i>Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" match-password="confitmPassword" required>
+        </div>
+        <div class="form-group">
+          <input OnSubmit alert="Please check your email to confirm your registratio" type="submit" value="Sign Up">
+        </div>
+      </form>
+    </div>
+    <div id="g_id_onload"
+     data-client_id="YOUR_CLIENT_ID"
+     data-callback="handleCredentialResponse">
+</div>
+  
+    <script>
+      // Form Validation
+      const form = document.getElementById('signup-form');
+  
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Perform form validation logic here
+      });
+    </script>
+  </body>
